@@ -121,5 +121,23 @@ Ce projet utilise les outils suivants :
 - **Bibliothèque Standard C++**
 - **Python** pour avoir transformé les images PPM en JPG (programme directement trouvé sur internet)
 
+## Travail avec Git  
 
+- Principales actions réalisées au cours de notre projet:
+  - initialisation du dépôt : `git init`
+  - ajout et commit des modifications : `git add` puis `git commit -m "Message"`
+  - utilisation de branches pour tester des modifications sans forcément affecter le code principal : `git branch`
+  - envoi de nos changements : `git push`
+  - récupération des mises à jour : `git pull`
+  - exclusion de fichiers inutiles : `gitignore`
+
+- Problèmes rencontrés :
+  - fichier modifié en local empêchant un pull
+  - conlfits de fusion
+  - fichier non suivi ou non pris en compte
+
+- Solutions que nous avons utilisées face à ces problèmes :
+  - `git stash` pour sauvegarder temporairement les changements puis `git pull`
+  - utilisation d'un éditeur pour sauvergarder les conflits; `git merge`puis édition et `git commit`
+  - vérification avec `git status` des fichiers pris en compte et si manque d'un fichier faire `git add`
 
