@@ -94,10 +94,10 @@ Ces fonctionnalités sont implémentées dans les fichiers suivants :
 
 ## Difficultés rencontrées 
 
-- gestion de Git puisque c'était un nouvel outil pour nous
-- problèmes de coordination des fichiers entre nous avec VisualStudio Code et VisualStudio
-- perte de temps sur la gestion des codes (nous avancions mais nous ne testions pas toujours)
-- manque de temps dans la conception de notre projet pour finaliser
+- Gestion de Git qui était un outil nouveau pour nous.
+- Problèmes de coordination entre les fichiers dans Visual Studio Code et Visual Studio.
+- Manque de tests fréquents durant le développement, ce qui a ralenti la progression.
+- Manque de temps pour finaliser certaines parties du projet.
 
 
 ## Optimisation et Performances
@@ -141,3 +141,6 @@ Ce projet utilise les outils suivants :
   - utilisation d'un éditeur pour sauvergarder les conflits; `git merge`puis édition et `git commit`
   - vérification avec `git status` des fichiers pris en compte et si manque d'un fichier faire `git add`
 
+## Conclusion 
+
+Ce projet a permis de mettre en œuvre la transformée de Hough pour la détection de droites dans une image. En appliquant les méthodes naïve et polaire, nous avons réussi à détecter des segments de droites et à les visualiser. Bien que certaines optimisations et extensions soient possibles, le projet a permis d’acquérir une bonne maîtrise des algorithmes de détection de formes et de les adapter à des images simples. Ce travail peut servir de base pour de futures améliorations et applications dans des domaines que nous pourrons explorer par la suite de notre parcours. 
