@@ -135,7 +135,7 @@
     <ClCompile Include="hough_naif.cpp" />
     <ClCompile Include="hough_polaire.cpp" />
     <ClCompile Include="lecteur_ppm.cpp" />
-    <ClCompile Include="test_dessin_H_polaire.cpp" />
+    <ClCompile Include="test_Hough_polaire.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="analyse_droite.h" />
