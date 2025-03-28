@@ -22,6 +22,6 @@ std::vector<std::pair<int, int>> extraire_pixels_blancs(const Image& image_binai
         }
     }
 
-    // Retourne la liste des coordonnées des pixels blancs
+    // Retourne la liste des coordonnees des pixels blancs
     return pixels_blancs;
 }
