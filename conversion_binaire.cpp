@@ -23,12 +23,12 @@ Image convertir_en_binaire(const Image& image_entree, int seuil) {
             // Conversion du pixel en niveaux de gris avec la formule de luminance
             int gris = static_cast<int>(0.299 * pixel.r + 0.587 * pixel.g + 0.114 * pixel.b);
 
-            // Seuil : si la valeur de gris est inférieure au seuil, on met du noir ; sinon, du blanc
+            // Seuil : si la valeur de gris est inférieure au seuil, on met du noir  sinon, du blanc
             if (gris < seuil) {
-                image_sortie.pixels[y][x] = { 0, 0, 0 };       // Pixel noir
+                image_sortie.pixels[y][x] = { 0, 0, 0 };       // Pour Pixel noir
             }
             else {
-                image_sortie.pixels[y][x] = { 255, 255, 255 }; // Pixel blanc
+                image_sortie.pixels[y][x] = { 255, 255, 255 }; // Pour Pixel blanc
             }
         }
     }
