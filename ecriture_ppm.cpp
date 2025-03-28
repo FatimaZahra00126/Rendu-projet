@@ -18,7 +18,7 @@ void ecrire_image_ppm(const Image& image, const std::string& nom_fichier) {
     fichier << image.largeur << " " << image.hauteur << "\n"; // dimensions de l'image
     fichier << image.valeur_max << "\n"; // valeur maximale pour les couleurs (ex : 255)
 
-    // ETAPE 2 : ecrire les donnees de chaque pixel
+    // ETAPE 2 : ecriture des donnees de chaque pixel
     for (int y = 0; y < image.hauteur; ++y) {
         for (int x = 0; x < image.largeur; ++x) {
             Couleur pixel = image.pixels[y][x]; // Recuperation du pixel (x, y)
