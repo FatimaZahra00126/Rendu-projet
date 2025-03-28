@@ -127,16 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="analyse_droite.cpp" />
     <ClCompile Include="conversion_binaire.cpp" />
+    <ClCompile Include="dessin_droite.cpp" />
     <ClCompile Include="ecriture_ppm.cpp" />
     <ClCompile Include="extraction_pixels.cpp" />
+    <ClCompile Include="hough_naif.cpp" />
     <ClCompile Include="lecteur_ppm.cpp" />
-    <ClCompile Include="test_extraction.cpp" />
+    <ClCompile Include="test_Hough_nai.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="analyse_droite.h" />
     <ClInclude Include="conversion_binaire.h" />
+    <ClInclude Include="dessin_droite.h" />
     <ClInclude Include="ecriture_ppm.h" />
     <ClInclude Include="extraction_pixels.h" />
+    <ClInclude Include="hough_naif.h" />
     <ClInclude Include="lecteur_ppm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

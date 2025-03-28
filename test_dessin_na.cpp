@@ -30,10 +30,10 @@ int main() {
     // Étape 6 : Sauvegarder l’image avec les droites détectées
     std::string nom_image_resultat = "image_avec_droites.ppm";
     ecrire_image_ppm(image_avec_droites, nom_image_resultat);
-    std::cout << "Image avec droites enregistrée dans : " << nom_image_resultat << "\n";
+    std::cout << "Image avec droites enregistree dans : " << nom_image_resultat << "\n";
 
     // Étape 7 : Afficher les droites détectées
-    std::cout << "\n---- Droites détectées (votes >= " << seuil_votes << ") ----\n";
+    std::cout << "\n---- Droites detectees (votes >= " << seuil_votes << ") ----\n";
     for (int i = 0; i < hough.nb_m; ++i) {
         for (int j = 0; j < hough.nb_b; ++j) {
             int votes = hough.accumulateur[i][j];
