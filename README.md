@@ -133,7 +133,7 @@ Ce projet utilise les outils suivants :
 
 - Problèmes rencontrés :
   - fichier modifié en local empêchant un pull
-  - conlfits de fusion
+  - conflits de fusion
   - fichier non suivi ou non pris en compte
 
 - Solutions que nous avons utilisées face à ces problèmes :
@@ -143,4 +143,4 @@ Ce projet utilise les outils suivants :
 
 ## Conclusion 
 
-Ce projet a permis de mettre en œuvre la transformée de Hough pour la détection de droites dans une image. En appliquant les méthodes naïve et polaire, nous avons réussi à détecter des segments de droites et à les visualiser. Bien que certaines optimisations et extensions soient possibles, le projet a permis d’acquérir une bonne maîtrise des algorithmes de détection de formes et de les adapter à des images simples. Ce travail peut servir de base pour de futures améliorations et applications dans des domaines que nous pourrons explorer par la suite de notre parcours. 
+Ce projet a permis de mettre en œuvre la transformée de Hough pour la détection de droites dans une image. En appliquant les méthodes naïve et polaire, nous avons réussi à détecter des segments de droites et à les visualiser. Bien que certaines optimisations et extensions soient possibles, le projet a permis d’acquérir une bonne maîtrise des algorithmes de détection de formes et de les adapter à des images simples. Nous avons donc été amené à comprendre un nouveau sujet pour nous, à l'analyser et réussir à construire des algorithmes solides permettant de réaliser le projet. Ce travail pourra nous servir de base pour de futures améliorations mais aussi d'applications dans des domaines que nous pourrons potentiellement explorer dans la suite de notre parcours. 
