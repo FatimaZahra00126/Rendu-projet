@@ -1,6 +1,6 @@
 #include "dessin_droite_aleatoire.h"
 #include <cmath>
-#include "lecteur_ppm.h" // Pour la structure Image
+#include "lecteur_ppm.h" 
 #include "hough_aleatoire.h" // Pour la structure Droite
 
 // Fonction pour dessiner les droites détectées aléatoirement sur une copie de l'image
