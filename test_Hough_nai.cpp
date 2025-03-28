@@ -6,21 +6,21 @@
 #include "hough_naif.h"
 
 int main() {
-    // Étape 1 : Lire l’image
+    // Chargement de l'image
     Image image = lire_image_ppm("imgTresSimple.ppm");
 
-    // Étape 2 : Conversion en binaire
+    // Conversion de l'image en binaire (noir et blanc)
     Image binaire = convertir_en_binaire(image, 128);
     ecrire_image_ppm(binaire, "image_binaire.ppm");
 
-    // Étape 3 : Initialiser l’espace de Hough naïf
+    // Initialisation de l'espace de Hough naÃ¯f
     double m_min = -5.0, m_max = 5.0, pas_m = 0.1, pas_b = 1.0;
     HoughNaif hough = initialiser_hough_naif(binaire, m_min, m_max, pas_m, pas_b);
 
-    // Étape 4 : Remplir l’accumulateur avec les pixels blancs
+    // Remplissage de l'accumulateur avec les pixels blancs de l'image
     remplir_accumulateur_naif(hough, binaire);
 
-    // Étape 5 : Afficher les droites détectées (si elles ont au moins 1 vote)
+    // Affichage des droites dÃ©tectÃ©es qui ont au moins 1 vote
     afficher_droites_significatives(hough, 1);
 
     return 0;
