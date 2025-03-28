@@ -150,7 +150,8 @@ Bien que ce projet se concentre principalement sur la détection de droites, il 
 Ce projet utilise les outils suivants :
 - **C++**
 - **Bibliothèque Standard C++**
-- **Python** pour avoir transformé les images PPM en JPG (programme directement trouvé sur internet)
+- **Python** utilisé pour convertir les images .ppm en .jpg à des fins de visualisation.
+Le script nommé "PPM_en_JPG" permet d’ouvrir les images générées par le programme et de les enregistrer dans un format plus standard. (programme directement trouvé sur internet)
 
 ## Travail avec Git  
 
