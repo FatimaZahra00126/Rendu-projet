@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Rendu projet.cpp" />
+    <ClCompile Include="ecriture_ppm.cpp" />
+    <ClCompile Include="lecteur_ppm.cpp" />
+    <ClCompile Include="test_lecteur.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ecriture_ppm.h" />
+    <ClInclude Include="lecteur_ppm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
