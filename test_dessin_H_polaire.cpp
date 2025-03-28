@@ -29,7 +29,7 @@ int main() {
     // 6. Sauvegarder l'image avec les droites
     ecrire_image_ppm(image_droites, "image_droites_polaire.ppm");
 
-    std::cout << "Image avec droites tracées (polaire) enregistrée.\n";
+    std::cout << "Image avec droites tracees (polaire) enregistree.\n";
 
     return 0;
 }
