@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="analyse_droite.cpp" />
+    <ClCompile Include="bresenham.cpp" />
     <ClCompile Include="conversion_binaire.cpp" />
     <ClCompile Include="dessin_droite.cpp" />
     <ClCompile Include="dessin_droite_aleatoire.cpp" />
@@ -139,10 +140,11 @@
     <ClCompile Include="hough_naif.cpp" />
     <ClCompile Include="hough_polaire.cpp" />
     <ClCompile Include="lecteur_ppm.cpp" />
-    <ClCompile Include="test_filtrage.cpp" />
+    <ClCompile Include="test_bersenham.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="analyse_droite.h" />
+    <ClInclude Include="bresenham.h" />
     <ClInclude Include="conversion_binaire.h" />
     <ClInclude Include="dessin_droite.h" />
     <ClInclude Include="dessin_droite_aleatoire.h" />
