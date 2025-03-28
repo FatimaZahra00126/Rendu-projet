@@ -1,6 +1,6 @@
 #include "hough_polaire.h"
 #include <cmath>
-#include "extraction_pixels.h"  // Pour extraire les pixels blancs
+#include "extraction_pixels.h"  // Pour l'extration les pixels blancs
 
 // Définition de M_PI (valeur de pi)
 #ifndef M_PI
@@ -36,7 +36,7 @@ HoughPolaire initialiser_hough_polaire(int largeur, int hauteur, double pas_thet
     return hough;
 }
 
-// Fonction pour remplir l'accumulateur de Hough avec les pixels blancs de l'image binaire
+// Fonction de remplissage de l'accumulateur de Hough avec les pixels blancs de l'image binaire
 void remplir_accumulateur_polaire(HoughPolaire& hough, const Image& image_binaire) {
     // Récupération des coordonnées (x, y) de tous les pixels blancs
     std::vector<std::pair<int, int>> pixels_blancs = extraire_pixels_blancs(image_binaire);

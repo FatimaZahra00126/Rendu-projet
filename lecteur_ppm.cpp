@@ -18,10 +18,10 @@ Image lire_image_ppm(const std::string& imgTresSimple) {
 
     // Lire la première ligne non commentée contenant "P3"
     do {
-        std::getline(fichier, ligne);     // Lire une ligne
+        std::getline(fichier, ligne);     // Lecture d'une ligne
     } while (ligne[0] == '#');            // Ignorer les lignes de commentaire commençant par #
 
-    std::istringstream flux_entete(ligne);  // Convertit la ligne lue en flux
+    std::istringstream flux_entete(ligne);  // Conversion de la ligne lue en flux
     std::string entete;
     flux_entete >> entete;
 
@@ -33,7 +33,7 @@ Image lire_image_ppm(const std::string& imgTresSimple) {
 
     // Lire la largeur, hauteur et valeur maximale des couleurs
     int compteur = 0;
-    int valeur[3] = { 0, 0, 0 };  // Stocke largeur, hauteur, val_max
+    int valeur[3] = { 0, 0, 0 };  // Stockage de la largeur, de la hauteur, et de la val_max
 
     while (compteur < 3 && std::getline(fichier, ligne)) {
         // Ignore les lignes vides ou les commentaires
@@ -58,12 +58,12 @@ Image lire_image_ppm(const std::string& imgTresSimple) {
     std::cout << "Image lue : " << largeur << " x " << hauteur << std::endl;
     std::cout << "Valeur max : " << val_max << std::endl;
 
-    // Enregistre les dimensions dans l'objet image
+    // Enregistrement des dimensions dans l'objet image
     image.largeur = largeur;
     image.hauteur = hauteur;
     image.valeur_max = val_max;
 
-    // Initialise la grille de pixels avec des couleurs vides (0,0,0)
+    // Initialisation de la grille de pixels avec des couleurs vides (0,0,0)
     image.pixels.resize(image.hauteur, std::vector<Couleur>(image.largeur));
 
     // Variables de lecture des pixels
@@ -82,17 +82,17 @@ Image lire_image_ppm(const std::string& imgTresSimple) {
             // Vérifie qu’on ne depasse pas les dimensions de l’image
             if (y >= image.hauteur) break;
 
-            // Stocke le pixel dans la matrice
+            // Stockage du pixel dans la matrice
             image.pixels[y][x] = { troisValeurs[0], troisValeurs[1], troisValeurs[2] };
             x++;  // Avancer dans la ligne
 
             if (x >= image.largeur) {
                 x = 0;
-                y++;  // Passe à la ligne suivante
+                y++;  // Passage à la ligne suivante
             }
         }
         else {
-            idxLigne += 1;  // Passe à la composante suivante (G ou B)
+            idxLigne += 1;  // Passage à la composante suivante (G ou B)
         }
     }
 

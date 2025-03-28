@@ -4,14 +4,14 @@
 #include "conversion_binaire.h"
 
 int main() {
-    // Étape 1 : Lire une image couleur
+    // chargement de l'image couleur
     Image image_couleur = lire_image_ppm("imgTresSimple.ppm");
 
-    // Étape 2 : Appliquer la conversion binaire avec un seuil (ex. : 128)
+    // conversion en binaire avec un seuil de 128
     int seuil = 128;
     Image image_binaire = convertir_en_binaire(image_couleur, seuil);
 
-    // Étape 3 : Sauvegarder l’image binaire
+    // sauvegarde de l'image binaire
     ecrire_image_ppm(image_binaire, "image_binaire.ppm");
 
     std::cout << "Conversion binaire terminee. Resultat enregistre dans 'image_binaire.ppm'" << std::endl;
