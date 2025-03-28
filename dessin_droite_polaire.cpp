@@ -4,11 +4,11 @@
 #include <tuple>
 #include <algorithm>
 
-// Fonction pour dessiner les droites détectées dans l'accumulateur de Hough (coordonnées polaires)
+// Fonction pour dessiner les droites detectees dans l'accumulateur de Hough (coordonnees polaires)
 Image dessiner_droites_polaire(const HoughPolaire& hough, Image image, int seuil) {
-    Couleur rouge = { 255, 0, 0 }; // Couleur utilisée pour dessiner les droites (rouge)
+    Couleur rouge = { 255, 0, 0 }; // Couleur utilisee pour dessiner les droites (rouge)
 
-    // === Étape 1 : collecter les droites ayant un nombre de votes >= seuil ===
+    // Etape 1 : collecter les droites ayant un nombre de votes >= seuil ===
     std::vector<std::tuple<double, double, int>> droites; // Stocke (theta, rho, votes)
 
     // Parcours de l'accumulateur
@@ -16,7 +16,7 @@ Image dessiner_droites_polaire(const HoughPolaire& hough, Image image, int seuil
         for (int j = 0; j < hough.nb_rho; ++j) {
             int votes = hough.accumulateur[i][j];
 
-            // Si le nombre de votes dépasse le seuil, on enregistre cette droite
+            // Si le nombre de votes depasse le seuil, on enregistre cette droite
             if (votes >= seuil) {
                 double theta = hough.theta_min + i * hough.pas_theta;
                 double rho = hough.rho_min + j * hough.pas_rho;
@@ -26,16 +26,16 @@ Image dessiner_droites_polaire(const HoughPolaire& hough, Image image, int seuil
         }
     }
 
-    // === Étape 2 : trier les droites par nombre de votes décroissant ===
+    // Etape 2 : trier les droites par nombre de votes decroissant 
     std::sort(droites.begin(), droites.end(),
         [](const auto& a, const auto& b) {
-            return std::get<2>(a) > std::get<2>(b); // tri par le 3ème élément (votes)
+            return std::get<2>(a) > std::get<2>(b); // tri par le 3eme element (votes)
         });
 
-    // === Étape 3 : ne garder que les 10 meilleures droites ===
+    // Etape 3 : ne garder que les 10 meilleures droites 
     int nb_max_droites = std::min(10, static_cast<int>(droites.size()));
 
-    // === Étape 4 : dessiner les droites sélectionnées sur l'image ===
+    // Etape 4 : dessiner les droites selectionnees sur l'image
     for (int k = 0; k < nb_max_droites; ++k) {
         double theta = std::get<0>(droites[k]);
         double rho = std::get<1>(droites[k]);
@@ -46,7 +46,7 @@ Image dessiner_droites_polaire(const HoughPolaire& hough, Image image, int seuil
                 // Calcul de rho pour ce point (x, y)
                 double rho_calc = x * std::cos(theta) + y * std::sin(theta);
 
-                // Si ce point est proche (dans une tolérance de 0.5) de la droite, on le colore en rouge
+                // Si ce point est proche (dans une tolerance de 0.5) de la droite, on le colore en rouge
                 if (std::abs(rho_calc - rho) < 0.5) {
                     image.pixels[y][x] = rouge;
                 }
@@ -54,6 +54,6 @@ Image dessiner_droites_polaire(const HoughPolaire& hough, Image image, int seuil
         }
     }
 
-    // Retourne l'image modifiée avec les droites dessinées
+    // Retourne l'image modifiee avec les droites dessinees
     return image;
 }
