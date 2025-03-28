@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="conversion_binaire.cpp" />
     <ClCompile Include="ecriture_ppm.cpp" />
+    <ClCompile Include="extraction_pixels.cpp" />
     <ClCompile Include="lecteur_ppm.cpp" />
-    <ClCompile Include="test_conversion.cpp" />
+    <ClCompile Include="test_extraction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="conversion_binaire.h" />
     <ClInclude Include="ecriture_ppm.h" />
+    <ClInclude Include="extraction_pixels.h" />
     <ClInclude Include="lecteur_ppm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

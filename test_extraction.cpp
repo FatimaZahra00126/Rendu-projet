@@ -14,7 +14,7 @@ int main() {
     // Étape 3 : Sauvegarder l’image binaire
     ecrire_image_ppm(image_binaire, "image_binaire.ppm");
 
-    std::cout << "Conversion binaire terminée. Résultat enregistré dans 'image_binaire.ppm'" << std::endl;
+    std::cout << "Conversion binaire terminee. Resultat enregistre dans 'image_binaire.ppm'" << std::endl;
 
     return 0;
 }
