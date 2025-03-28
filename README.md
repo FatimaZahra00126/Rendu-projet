@@ -67,7 +67,7 @@ Le projet est organisé de la manière suivante :
 - **hough_naif.h / hough_naif.cpp** : Implémentation de l'algorithme de la transformée de Hough. Ce fichier inclut des fonctions pour initialiser l’espace d’accumulation et y insérer les données issues des pixels de l’image binaire.
 - **hough_polaire.h / hough_polaire.cpp** : Implémentation de l’algorithme de la transformée de Hough dans l’espace polaire. Ce fichier inclut des fonctions pour initialiser l’accumulateur polaire, y insérer les données des pixels blancs et afficher les lignes détectées avec un certain seuil de votes.
 
-### Ajout : Extraction et Dessin des Droites
+### Extraction et Dessin des Droites
 
 Le projet inclut également des fonctionnalités pour extraire les pixels blancs d’une image binaire et dessiner les droites détectées par la transformée de Hough :
 
@@ -99,8 +99,10 @@ Ces fonctionnalités sont implémentées dans les fichiers suivants :
 - perte de temps sur la gestion des codes (nous avancions mais nous ne testions pas toujours)
 - manque de temps dans la conception de notre projet pour finaliser
 
-## Perspective : Détection de Cercles
-Bien que ce projet se concentre principalement sur la détection de droites, il est également possible d'étendre l’algorithme pour tenter de détecter des formes circulaires. En ajustant la transformée de Hough pour travailler avec des cercles plutôt qu’avec des lignes, on peut détecter des arcs ou des cercles dans une image en utilisant des paramètres spécifiques à cette forme.
+
+## Optimisation et Performances
+Le projet a été optimisé pour traiter des images de tailles variées. Toutefois, il est important de noter que la complexité de la transformée de Hough peut augmenter considérablement avec la taille de l'image et la résolution de l'accumulateur. Des techniques d'optimisation supplémentaires pourraient être explorées pour améliorer les performances sur de grandes images.
+
 
 ## Cas d'Utilisation
 Ce projet peut être appliqué dans différents domaines où la détection de droites est nécessaire, tels que :
@@ -109,13 +111,15 @@ Ce projet peut être appliqué dans différents domaines où la détection de dr
 - **Vision industrielle** : Identification des défauts dans des matériaux ou produits fabriqués à l’aide de la détection des bords.
 - **Analyse d’architecture** : Détection de lignes et de bords dans des images d’architectures ou de plans de bâtiments.
 
-## Optimisation et Performances
-Le projet a été optimisé pour traiter des images de tailles variées. Toutefois, il est important de noter que la complexité de la transformée de Hough peut augmenter considérablement avec la taille de l'image et la résolution de l'accumulateur. Des techniques d'optimisation supplémentaires pourraient être explorées pour améliorer les performances sur de grandes images.
+## Perspective : Détection de Cercles
+Bien que ce projet se concentre principalement sur la détection de droites, il est également possible d'étendre l’algorithme pour tenter de détecter des formes circulaires. En ajustant la transformée de Hough pour travailler avec des cercles plutôt qu’avec des lignes, on peut détecter des arcs ou des cercles dans une image en utilisant des paramètres spécifiques à cette forme.
+
 
 ## Dépendances et Configuration
 Ce projet utilise les outils suivants :
 - **C++**
 - **Bibliothèque Standard C++**
 - **Python** pour avoir transformé les images PPM en JPG (programme directement trouvé sur internet)
+
 
 
