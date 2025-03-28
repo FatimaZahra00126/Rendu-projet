@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="conversion_binaire.cpp" />
     <ClCompile Include="ecriture_ppm.cpp" />
     <ClCompile Include="lecteur_ppm.cpp" />
-    <ClCompile Include="test_lecteur.cpp" />
+    <ClCompile Include="test_conversion.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="conversion_binaire.h" />
     <ClInclude Include="ecriture_ppm.h" />
     <ClInclude Include="lecteur_ppm.h" />
   </ItemGroup>
