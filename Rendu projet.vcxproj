@@ -130,21 +130,25 @@
     <ClCompile Include="analyse_droite.cpp" />
     <ClCompile Include="conversion_binaire.cpp" />
     <ClCompile Include="dessin_droite.cpp" />
+    <ClCompile Include="dessin_droite_aleatoire.cpp" />
     <ClCompile Include="dessin_droite_polaire.cpp" />
     <ClCompile Include="ecriture_ppm.cpp" />
     <ClCompile Include="extraction_pixels.cpp" />
+    <ClCompile Include="hough_aleatoire.cpp" />
     <ClCompile Include="hough_naif.cpp" />
     <ClCompile Include="hough_polaire.cpp" />
     <ClCompile Include="lecteur_ppm.cpp" />
-    <ClCompile Include="test_dessin_H_polaire.cpp" />
+    <ClCompile Include="test_dessin_aleatoire.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="analyse_droite.h" />
     <ClInclude Include="conversion_binaire.h" />
     <ClInclude Include="dessin_droite.h" />
+    <ClInclude Include="dessin_droite_aleatoire.h" />
     <ClInclude Include="dessin_droite_polaire.h" />
     <ClInclude Include="ecriture_ppm.h" />
     <ClInclude Include="extraction_pixels.h" />
+    <ClInclude Include="hough_aleatoire.h" />
     <ClInclude Include="hough_naif.h" />
     <ClInclude Include="hough_polaire.h" />
     <ClInclude Include="lecteur_ppm.h" />
