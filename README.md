@@ -98,6 +98,7 @@ Ces fonctionnalités sont implémentées dans les fichiers suivants :
 - Problèmes de coordination entre les fichiers dans Visual Studio Code et Visual Studio.
 - Manque de tests fréquents durant le développement, ce qui a ralenti la progression.
 - Manque de temps pour finaliser certaines parties du projet.
+- Problème de modification des codes étant donné qu'on avait pas les même consoles de codage.
 
 
 ## Optimisation et Performances
@@ -123,7 +124,8 @@ Ce projet utilise les outils suivants :
 
 ## Travail avec Git  
 
-- Principales actions réalisées au cours de notre projet:
+- Principales actions réalisées au cours de notre projet: 
+  - clonage du tp avec le référentiel du dépôt : `git clone` suivi du lien de code tu TP 
   - initialisation du dépôt : `git init`
   - ajout et commit des modifications : `git add` puis `git commit -m "Message"`
   - utilisation de branches pour tester des modifications sans forcément affecter le code principal : `git branch`
@@ -135,11 +137,13 @@ Ce projet utilise les outils suivants :
   - fichier modifié en local empêchant un pull
   - conflits de fusion
   - fichier non suivi ou non pris en compte
+  - modification non prise en compte 
 
 - Solutions que nous avons utilisées face à ces problèmes :
   - `git stash` pour sauvegarder temporairement les changements puis `git pull`
   - utilisation d'un éditeur pour sauvergarder les conflits; `git merge`puis édition et `git commit`
   - vérification avec `git status` des fichiers pris en compte et si manque d'un fichier faire `git add`
+  - utilisation de `git push` pour pousser les modifications 
 
 ## Conclusion 
 
