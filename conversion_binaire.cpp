@@ -1,6 +1,6 @@
 #include "conversion_binaire.h" // Inclusion de l'en-tete contenant la definition de la fonction et des structures necessaires
 
-// Fonction pour convertir une image en noir et blanc (binaire) e partir d'un seuil
+// Fonction pour convertir une image en noir et blanc (binaire) à partir d'un seuil
 Image convertir_en_binaire(const Image& image_entree, int seuil) {
     Image image_sortie; // Declaration de l'image de sortie (resultat de la conversion)
 
@@ -18,17 +18,17 @@ Image convertir_en_binaire(const Image& image_entree, int seuil) {
     // Parcours de tous les pixels de l'image d'entree
     for (int y = 0; y < image_entree.hauteur; ++y) {
         for (int x = 0; x < image_entree.largeur; ++x) {
-            Couleur pixel = image_entree.pixels[y][x]; // Recupere le pixel a la position (x, y)
+            Couleur pixel = image_entree.pixels[y][x]; // Recuperation du pixel à la position (x, y)
 
             // Conversion du pixel en niveaux de gris avec la formule de luminance
             int gris = static_cast<int>(0.299 * pixel.r + 0.587 * pixel.g + 0.114 * pixel.b);
 
             // Seuil : si la valeur de gris est inferieure au seuil, on met du noir  sinon, du blanc
             if (gris < seuil) {
-                image_sortie.pixels[y][x] = { 0, 0, 0 };       // Pour Pixel noir
+                image_sortie.pixels[y][x] = { 0, 0, 0 };       // Pour le Pixel noir
             }
             else {
-                image_sortie.pixels[y][x] = { 255, 255, 255 }; // Pour Pixel blanc
+                image_sortie.pixels[y][x] = { 255, 255, 255 }; // Pour le Pixel blanc
             }
         }
     }
