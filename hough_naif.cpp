@@ -32,7 +32,7 @@ HoughNaif initialiser_hough_naif(const Image& image, double m_min, double m_max,
 
 // Fonction pour remplir l'accumulateur de Hough a partir des pixels blancs de l'image binaire
 void remplir_accumulateur_naif(HoughNaif& hough, const Image& image_binaire) {
-    // Extraire les coordonn�es (x, y) des pixels blancs de l'image binaire
+    // Extraire les coordonnees (x, y) des pixels blancs de l'image binaire
     std::vector<std::pair<int, int>> pixels_blancs = extraire_pixels_blancs(image_binaire);
 
     // Pour chaque pixel blanc
