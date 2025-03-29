@@ -26,7 +26,7 @@ Image dessiner_droites_polaire(const HoughPolaire& hough, Image image, int seuil
         }
     }
 
-    // Etape 2 : trier les droites par nombre de votes decroissant 
+    // Etape 2 : triage les droites par nombre de votes decroissant 
     std::sort(droites.begin(), droites.end(),
         [](const auto& a, const auto& b) {
             return std::get<2>(a) > std::get<2>(b); // tri par le 3eme element (votes)
