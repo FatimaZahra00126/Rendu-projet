@@ -92,6 +92,37 @@ Ces fonctionnalités sont implémentées dans les fichiers suivants :
 
 - `extraction_pixels.h` et `extraction_pixels.cpp` : Définissent les fonctions permettant d’extraire les pixels blancs d’une image binaire.
 
+  
+## Nouvelles fonctionnalités ajoutées
+
+Le projet a été étendu avec les éléments suivants :
+
+- **Méthode de détection aléatoire** :
+  - Implémentation d’une approche probabiliste inspirée de RANSAC.
+  - Plus rapide sur les grandes images.
+  - Intégrée dans le menu principal pour comparaison avec les autres méthodes.
+
+- **Filtrage des droites proches** :
+  - Comparaison des droites détectées pour éviter les doublons visuels.
+  - Seules les droites les plus représentatives sont conservées.
+
+- **Algorithme de tracé de segment de Bresenham** :
+  - Implémentation complète pour améliorer la qualité visuelle des tracés.
+  - Utilisé dans les fonctions de dessin pour une meilleure précision.
+  - Gère tous les cas : pente faible, forte, montante ou descendante.
+    
+**Méthode aléatoire et tracé avec Bresenham :**
+- **Méthode aléatoire** :
+  - Tirage aléatoire de paires de pixels blancs pour générer des droites candidates.
+  - Accumulateur discretisé pour compter les occurrences des droites détectées.
+  - Filtrage des droites proches pour ne conserver que les plus représentatives.
+    
+- **Méthode aléatoire** :
+  - Génère des droites à partir de deux pixels blancs choisis au hasard (sampling).
+  - Trie les droites détectées selon leur nombre de votes dans l’accumulateur.
+  - Filtre les droites proches entre elles (proches en pente et ordonnée à l’origine).
+  - Dessin des droites retenues sur l’image originale en rouge.
+
 ## Difficultés rencontrées 
 
 - Gestion de Git qui était un outil nouveau pour nous.
@@ -120,7 +151,8 @@ Bien que ce projet se concentre principalement sur la détection de droites, il 
 Ce projet utilise les outils suivants :
 - **C++**
 - **Bibliothèque Standard C++**
-- **Python** pour avoir transformé les images PPM en JPG (programme directement trouvé sur internet)
+- **Python** utilisé pour convertir les images .ppm en .jpg à des fins de visualisation.
+Le script nommé "PPM_en_JPG" permet d’ouvrir les images générées par le programme et de les enregistrer dans un format plus standard. (programme directement trouvé sur internet)
 
 ## Travail avec Git  
 
