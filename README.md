@@ -159,6 +159,7 @@ Le script nommé "PPM_en_JPG" permet d’ouvrir les images générées par le pr
 - Principales actions réalisées au cours de notre projet: 
   - clonage du tp avec le référentiel du dépôt : `git clone` suivi du lien de code tu TP 
   - initialisation du dépôt : `git init`
+  - `cd suivi du chemin du projet` afin de pourvoir récupérer tout le contenu du dossier du projet suivi de `ls` `et git pull`
   - ajout et commit des modifications : `git add` puis `git commit -m "Message"`
   - utilisation de branches pour tester des modifications sans forcément affecter le code principal : `git branch`
   - envoi de nos changements : `git push`
@@ -180,3 +181,5 @@ Le script nommé "PPM_en_JPG" permet d’ouvrir les images générées par le pr
 ## Conclusion 
 
 Ce projet a permis de mettre en œuvre la transformée de Hough pour la détection de droites dans une image. En appliquant les méthodes naïve et polaire, nous avons réussi à détecter des segments de droites et à les visualiser. Bien que certaines optimisations et extensions soient possibles, le projet a permis d’acquérir une bonne maîtrise des algorithmes de détection de formes et de les adapter à des images simples. Nous avons donc été amené à comprendre un nouveau sujet pour nous, à l'analyser et réussir à construire des algorithmes solides permettant de réaliser le projet. Ce travail pourra nous servir de base pour de futures améliorations mais aussi d'applications dans des domaines que nous pourrons potentiellement explorer dans la suite de notre parcours. 
+Cependant on pense que ce sera possible de faire une adaptation de la transformée de hough pour détecter d'autres formes comme des cercles ou des éllipses.
+Aussi une amélioration de l'efficacité pour des images plus grandes et avec plus de bruit.
